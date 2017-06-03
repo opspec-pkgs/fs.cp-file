@@ -1,0 +1,25 @@
+name: github.com/opspec-pkgs/fs.cp-file
+description: copies a file to a directory
+inputs:
+  file:
+    file:
+      description: file to copy
+  dir:
+    dir:
+      description: dir to copy file to
+  name:
+    string:
+      description: name of copied file
+outputs:
+  dir:
+    dir:
+      description: dir containing the copied file
+run:
+  container:
+    cmd: [ sh, -ce, cp /file "$(name)" ]
+    dirs:
+      /dir: dir
+    files:
+      /file: file
+    image: { ref: 'alpine:3.6' }
+    workDir: /dir
