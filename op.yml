@@ -14,6 +14,7 @@ outputs:
   dir:
     dir:
       description: dir containing the copied file
+version: 1.0.0
 run:
   container:
     cmd: [ sh, -ce, cp /file "$(name)" ]
