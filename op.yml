@@ -19,8 +19,8 @@ run:
   container:
     cmd: [ sh, -ce, cp /file "$(name)" ]
     dirs:
-      /dir: dir
+      /dir: $(dir)
     files:
-      /file: file
+      /file: $(file)
     image: { ref: 'alpine:3.6' }
     workDir: /dir
