@@ -5,6 +5,12 @@ All notable changes will be documented in this file in accordance with
 
 ## \[Unreleased]
 
+## \[2.0.0] - 2019-05-07
+
+### Changed
+
+- allow specifying dstPath
+
 ## \[1.1.0] - 2018-03-07
 
 ### Added
