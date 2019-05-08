@@ -10,18 +10,32 @@ inputs:
   dstPath:
     string:
       description: relative dst file path to copy the file (will be created if doesn't exist)
+  userId:
+    number:
+      constraints:
+        format: integer
+      default: 0
+      description: user id of copied content
+  groupId:
+    number:
+      constraints:
+        format: integer
+      default: 0
+      description: group id of copied content
 opspec: 0.1.6
 outputs:
   dst:
     dir:
       description: dir containing the copied file
-version: 2.0.0
+version: 2.0.1
 run:
   container:
-    cmd: 
-      - cp
-      - /src
-      - $(dstPath)
+    cmd:
+      - sh
+      - -ce
+      - |
+        cp /src $(dstPath)
+        chown $(userId):$(groupId) $(dstPath)
     dirs:
       /dst: $(dst)
     files:
