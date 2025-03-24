@@ -1,5 +1,4 @@
-[![build](https://github.com/opspec-pkgs/fs.cp-file/actions/workflows/build.yml/badge.svg)](https://github.com/opspec-pkgs/fs.cp-file/actions/workflows/build.yml)
-
+[![Build Status](https://github.com/opspec-pkgs/fs.cp-file/workflows/build/badge.svg?branch=main)](https://github.com/opspec-pkgs/fs.cp-file/actions?query=workflow%3Abuild+branch%3Amain)
 
 # Problem statement
 
